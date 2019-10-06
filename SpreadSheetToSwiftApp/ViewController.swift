@@ -39,8 +39,8 @@ class ViewController: UIViewController {
                 
                 for i in 0...19{
                     let json:JSON = JSON(response .data as Any)
-                    let ID_String = json["jsondata"]["id"][i].string
-                    let Name_String = json["jsondata"]["name"][i].string
+                    let ID_String = json["jsondata"][i]["id"].string
+                    let Name_String = json["jsondata"][i]["name"].string
                     
                     self.ID_Array.append(ID_String!)
                     self.Name_Array.append(Name_String!)
