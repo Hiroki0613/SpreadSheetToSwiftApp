@@ -10,18 +10,47 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    
+    @IBOutlet weak var spreadSheetTableView: UITableView!
     
     var ID_Array = [String]()
-    var Name_Array = [String]()
+    var name_Array = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        spreadSheetTableView.delegate = self
+        spreadSheetTableView.dataSource = self
+        
         getData()
     }
 
      // MARK: - TableView
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return name_Array.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = spreadSheetTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        let cellID = cell.viewWithTag(1) as! UILabel
+        cellID.text = ID_Array[indexPath.row]
+        
+        let cellName = cell.viewWithTag(2) as! UILabel
+        cellName.text = name_Array[indexPath.row]
+        
+        return cell
+        
+    }
+    
+    
     
     
     // MARK: - API通信
@@ -49,12 +78,12 @@ class ViewController: UIViewController {
                             let Name_String = json["jsondata"][i]["name"].string
                             
                             self.ID_Array.append(ID_String!)
-                            self.Name_Array.append(Name_String!)
+                            self.name_Array.append(Name_String!)
                                    
                             print("hirohiro1")
                             print(self.ID_Array)
                             print("hirohiro2")
-                            print(self.Name_Array)
+                            print(self.name_Array)
                             
                         }
                         
