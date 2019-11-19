@@ -62,7 +62,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             //同期処理開始
             DispatchQueue.main.async {
                 
-                let url = "https://script.googleusercontent.com/macros/echo?user_content_key=oQatZCIiRtyN8zRbYNETqdtWzaVdxQ8Q4GzEguOkme0mWqTpzpZENZ5dov-5xYf_jvcyKKES-2525T6XGrI7BgYwpFZjZZQUm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLB_e7VVX3kcOGALXEI7BCPwlVjsy1Wpw0pLEpxgFh9MehdypQ3WWIVFghBl97br2w&lib=MYmh94ByISnwLCOaItycI2hSBcQ8BraCT"
+                let url = "https://script.googleusercontent.com/macros/echo?user_content_key=ARE1MbIy0JHTFpxlBNWWQfDguR4VrpiGkOu0YPS8jwkQokyZmE1TvHaJNmDQ71m8iS3cTjKxhEbLO7zSZ7_KqZVrWYs-cgfjm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLB_e7VVX3kcOGALXEI7BCPwlVjsy1Wpw0pLEpxgFh9MehdypQ3WWIVFghBl97br2w&lib=MYmh94ByISnwLCOaItycI2hSBcQ8BraCT"
+                
+            
                        
                 //Alamofireを使ってhttpsリクエスト
                 Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
