@@ -62,9 +62,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             //同期処理開始
             DispatchQueue.main.async {
                 
-                let url = "https://script.google.com/macros/s/AKfycbxH8Ec89wktvxtwoMBTCvNXK1g5fcfiAbhZadXXscxd54Lt2Ng/exec"
+//                let url = "https://script.google.com/macros/s/AKfycbxH8Ec89wktvxtwoMBTCvNXK1g5fcfiAbhZadXXscxd54Lt2Ng/exec"
                 
-            
+            let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetCopy.json"
                        
                 //Alamofireを使ってhttpsリクエスト
                 Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
