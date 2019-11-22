@@ -64,7 +64,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 
 //                let url = "https://script.google.com/macros/s/AKfycbxH8Ec89wktvxtwoMBTCvNXK1g5fcfiAbhZadXXscxd54Lt2Ng/exec"
                 
-            let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetCopy.json"
+//            let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetCopy.json"
+                
+                let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetJSON.json"
+                
                        
                 //Alamofireを使ってhttpsリクエスト
                 Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
@@ -74,10 +77,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                     case .success:
                         
                         //swiftyJSONを使って、JSON解析
-                        for i in 0...19{
+                        for i in 0...9{
                             let json:JSON = JSON(response .data as Any)
-                            let ID_String = json["jsondata"][i]["id"].string
-                            let Name_String = json["jsondata"][i]["name"].string
+                            let ID_String = json["id"][i].string
+                            let Name_String = json["name"][i].string
                             
                             self.ID_Array.append(ID_String!)
                             self.name_Array.append(Name_String!)
