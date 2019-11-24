@@ -80,12 +80,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                     case .success:
                         
                         //swiftyJSONを使って、JSON解析
-                        for i in 0...9{
+                        for i in 0...19{
                             let json:JSON = JSON(response .data as Any)
-                            let ID_String = json["id"].string
-                            let Name_String = json["name"].string
+//                            let ID_String = json[i]["id"].string
+                            let Name_String = json[i]["name"].string
                             
-                            self.ID_Array.append(ID_String!)
+//                            self.ID_Array.append(ID_String!)
                             self.name_Array.append(Name_String!)
                                    
                             print("hirohiro1")
