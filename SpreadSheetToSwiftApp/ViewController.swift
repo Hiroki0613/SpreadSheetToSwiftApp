@@ -72,6 +72,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 //Alamofireを使ってhttpsリクエスト
                 Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
                            
+                    print("hirohiroResponse")
+                    print(response)
+                    
                     //responceをswith文で分岐する
                     switch response.result{
                     case .success:
@@ -79,8 +82,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                         //swiftyJSONを使って、JSON解析
                         for i in 0...9{
                             let json:JSON = JSON(response .data as Any)
-                            let ID_String = json["id"][i].string
-                            let Name_String = json["name"][i].string
+                            let ID_String = json["id"].string
+                            let Name_String = json["name"].string
                             
                             self.ID_Array.append(ID_String!)
                             self.name_Array.append(Name_String!)
