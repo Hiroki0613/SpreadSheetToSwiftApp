@@ -66,9 +66,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 
 //            let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetCopy.json"
                 
-                let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetJSON.json"
+//                let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetJSON.json"
                 
-                       
+//                let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetJSON2.json"
+             
+//                let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetJSON3.json"
+
+                let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetJSON4.json"
+                
+//                let url = "http://jesuslovesjerusa.lolipop.jp/spreadSheetJSON5.json"
+
                 //Alamofireを使ってhttpsリクエスト
                 Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
                            
@@ -82,10 +89,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                         //swiftyJSONを使って、JSON解析
                         for i in 0...19{
                             let json:JSON = JSON(response .data as Any)
-//                            let ID_String = json[i]["id"].string
+                            
+                            
+                            let ID_String = json[i]["number"].string
                             let Name_String = json[i]["name"].string
                             
-//                            self.ID_Array.append(ID_String!)
+//                            let ID_String = json["class"][i]["number"].string
+//                            let Name_String = json["class"][i]["name"].string
+                            
+                            self.ID_Array.append(ID_String!)
                             self.name_Array.append(Name_String!)
                                    
                             print("hirohiro1")
