@@ -52,3 +52,14 @@
 <br>
 としてTableViewに載せる。
 
+<br>
+<br>
+<br>
+![SpreadSheetToSwiftAppMovie](https://user-images.githubusercontent.com/46615146/69808081-26606780-122a-11ea-9cff-0d11e4b10d5d.gif)
+
+
+## 苦労した点
+・直接Google Apps Script(GAS)でのJSONの読み込みが上手いことできず、
+<br>
+　スプレッドシートの内容をサーバーに直接アップすることで解決した。
+
