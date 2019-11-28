@@ -1,7 +1,12 @@
 # SpreadSheetToSwiftApp
-簡易ポートフォリオ】グーグルのスプレッドシートで記入した内容をSwiftで取得
+グーグルスプレッドシートを使ってJSONを作成。データをレンタルサーバーにアップして、Alamofireで取得。
 
-'''
+自分でJSON作成が出来るようになることで、オリジナルアプリ作成時に自分で作成したデータをリアルタイムでアプリへ送信可能。 アプリ限定会員へクーポン情報を送付する等、自分の好きなタイミングで情報が発信が出来るようになるために作成。 
+
+
+スプレッドシートを使って作成した、JSONデータの一部
+
+```
 [
 {
 "number": "1",
@@ -31,57 +36,10 @@
 "number": "7",
 "name": "Tomoya"
 },
-{
-"number": "8",
-"name": "Shinichi"
-},
-{
-"number": "9",
-"name": "Toshiyuki"
-},
-{
-"number": "10",
-"name": "Makoto"
-},
-{
-"number": "11",
-"name": "Yuta"
-},
-{
-"number": "12",
-"name": "Tarou"
-},
-{
-"number": "13",
-"name": "Yuki"
-},
-{
-"number": "14",
-"name": "Kazuya"
-},
-{
-"number": "15",
-"name": "Takumi"
-},
-{
-"number": "16",
-"name": "Yuji"
-},
-{
-"number": "17",
-"name": "Yutaka"
-},
-{
-"number": "18",
-"name": "Morio"
-},
-{
-"number": "19",
-"name": "Takuya"
-},
-{
-"number": "20",
-"name": "Masaya"
-}
-]
-'''
+・
+・
+・
+
+```
+
+
