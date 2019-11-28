@@ -10,14 +10,23 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,AppearTableViewDelegate {
+    
+    
     
     
     @IBOutlet weak var spreadSheetTableView: UITableView!
     
     var ID_Array = [String]()
     var name_Array = [String]()
+    
+    
+    //APIが取得できたことを知らせるフラグ
+    //プロトコルをつかって、tableViewをreloadさせる
+    var APISuccess = false
 
+    var appearTableView = AppearTableView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +34,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         spreadSheetTableView.dataSource = self
         
         getData()
+        
+        appearTableView.delegate = self
+        
     }
+    
+    //プロトコルが発動する時に動くメソッド
+    //ここでtableViewをreloadする。
+    func reloadTableView() {
+        self.spreadSheetTableView.reloadData()
+    }
+    
 
      // MARK: - TableView
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -107,12 +126,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                             
                         }
                         
+                        //APIが取得できたフラグを立てる
+                        self.APISuccess = true
+                        self.appearTableView.tableviewReload(ataiIn: self.APISuccess)
+                        
                     case .failure(let error):
                         print(error)
             
+                    
                     }
                     
                 }
+                
+                self.spreadSheetTableView.reloadData()
             
             }
             //同期処理終了
@@ -131,5 +157,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
      https://www.koreyome.com/web/make-spreadsheet-to-json-at-google-apps-script/
      */
 
+    /*
+   今回は、出力したJSONファイルを修正してからサーバーにアップロード、技術的にまだまだです・・・。
+     */
+    
 }
 
