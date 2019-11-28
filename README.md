@@ -4,6 +4,8 @@
 自分でJSON作成が出来るようになることで、オリジナルアプリ作成時に自分で作成したデータをリアルタイムでアプリへ送信可能。
 <br>
 アプリ限定会員へクーポン情報を送付する等、自分の好きなタイミングで情報が発信が出来るようになるために作成。 
+![SpreadSheetToSwiftAppMovie](https://user-images.githubusercontent.com/46615146/69808081-26606780-122a-11ea-9cff-0d11e4b10d5d.gif)
+
 <br>
 <br>
 スプレッドシートを使って作成した、JSONデータの一部
@@ -46,7 +48,6 @@
 
 この情報をAlamofireで取得。
 <br>
-![SpreadSheetToSwiftAppMovie](https://user-images.githubusercontent.com/46615146/69808081-26606780-122a-11ea-9cff-0d11e4b10d5d.gif)
 
 ・numberはID
 <br>
