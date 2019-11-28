@@ -4,11 +4,24 @@
 自分でJSON作成が出来るようになることで、オリジナルアプリ作成時に自分で作成したデータをリアルタイムでアプリへ送信可能。
 <br>
 アプリ限定会員へクーポン情報を送付する等、自分の好きなタイミングで情報が発信が出来るようになるために作成。 
+<br>
+<br>
+
 ![SpreadSheetToSwiftAppMovie](https://user-images.githubusercontent.com/46615146/69808081-26606780-122a-11ea-9cff-0d11e4b10d5d.gif)
+<br>
+<br>
+この情報をAlamofireで取得。
+<br>
+・numberはID
+<br>
+・nameは名前
+<br>
+としてTableViewに載せる。
+
 
 <br>
 <br>
-スプレッドシートを使って作成した、JSONデータの一部
+スプレッドシートを使って作成した、JSONデータ
 
 ```
 [
@@ -40,26 +53,63 @@
 "number": "7",
 "name": "Tomoya"
 },
-・
-・
-・
+{
+"number": "8",
+"name": "Shinichi"
+},
+{
+"number": "9",
+"name": "Toshiyuki"
+},
+{
+"number": "10",
+"name": "Makoto"
+},
+{
+"number": "11",
+"name": "Yuta"
+},
+{
+"number": "12",
+"name": "Tarou"
+},
+{
+"number": "13",
+"name": "Yuki"
+},
+{
+"number": "14",
+"name": "Kazuya"
+},
+{
+"number": "15",
+"name": "Takumi"
+},
+{
+"number": "16",
+"name": "Yuji"
+},
+{
+"number": "17",
+"name": "Yutaka"
+},
+{
+"number": "18",
+"name": "Morio"
+},
+{
+"number": "19",
+"name": "Takuya"
+},
+{
+"number": "20",
+"name": "Masaya"
+}
 ]
 ```
 
-この情報をAlamofireで取得。
-<br>
-
-・numberはID
-<br>
-・nameは名前
-<br>
-としてTableViewに載せる。
 
 <br>
-<br>
-<br>
-
-テスト
 <br>
 
 
