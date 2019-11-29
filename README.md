@@ -5,7 +5,7 @@
 <br>
 アプリ限定会員へクーポン情報を送付する等、自分の好きなタイミングで情報が発信が出来るようになるために作成。 
 <br>
-<br>
+用途としては、アプリ起動時に「今日の脳トレ、アドバイス」などを視聴者へ発信するのに使用。<br>
 
 ![SpreadSheetToSwiftAppMovie](https://user-images.githubusercontent.com/46615146/69808081-26606780-122a-11ea-9cff-0d11e4b10d5d.gif)
 <br>
