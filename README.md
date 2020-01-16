@@ -117,4 +117,9 @@
 ・直接Google Apps Script(GAS)でのJSONの読み込みが上手いことできず、
 <br>
 　スプレッドシートの内容をサーバーに直接アップすることで解決した。
+ 
+ 
+ ## 参考URL
+ Googleスプレッドシートの内容をjsonデータとして利用する
+ https://www.koreyome.com/web/make-spreadsheet-to-json-at-google-apps-script/
 
