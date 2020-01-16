@@ -120,6 +120,6 @@
  
  
  ## 参考URL
- Googleスプレッドシートの内容をjsonデータとして利用する
+ Googleスプレッドシートの内容をjsonデータとして利用する<br>
  https://www.koreyome.com/web/make-spreadsheet-to-json-at-google-apps-script/
 
